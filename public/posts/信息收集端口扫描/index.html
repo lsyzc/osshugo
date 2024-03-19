@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="zh" dir="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>信息收集与扫描 | Codertu&#39;s Blog</title>
+<meta name="keywords" content="">
+<meta name="description" content="信息收集与扫描 信息收集是指攻击者多攻击目标进行有计划和有步骤的信息收集从而了解目标的网络环境和信息安全状况的过程。 攻击目标网络 域名、IP地址、DNS服务器、邮件服务器、网络拓扑结构 攻击目标的个人 身份信息、职业等 收集方法 注册机构Whois查询 DNS和IP收集 WEB信息检索 网络拓扑侦">
+<meta name="author" content="Sulv">
+<link rel="canonical" href="http://localhost:1313/posts/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%E7%AB%AF%E5%8F%A3%E6%89%AB%E6%8F%8F/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.css" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/img/Q.gif">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/img/Q.gif">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/img/Q.gif">
+<link rel="apple-touch-icon" href="http://localhost:1313/img/Q.gif">
+<link rel="mask-icon" href="http://localhost:1313/img/Q.gif">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="zh" href="http://localhost:1313/posts/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%E7%AB%AF%E5%8F%A3%E6%89%AB%E6%8F%8F/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:title" content="信息收集与扫描" />
+<meta property="og:description" content="信息收集与扫描 信息收集是指攻击者多攻击目标进行有计划和有步骤的信息收集从而了解目标的网络环境和信息安全状况的过程。 攻击目标网络 域名、IP地址、DNS服务器、邮件服务器、网络拓扑结构 攻击目标的个人 身份信息、职业等 收集方法 注册机构Whois查询 DNS和IP收集 WEB信息检索 网络拓扑侦" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/posts/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%E7%AB%AF%E5%8F%A3%E6%89%AB%E6%8F%8F/" /><meta property="article:section" content="posts" />
+
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="信息收集与扫描"/>
+<meta name="twitter:description" content="信息收集与扫描 信息收集是指攻击者多攻击目标进行有计划和有步骤的信息收集从而了解目标的网络环境和信息安全状况的过程。 攻击目标网络 域名、IP地址、DNS服务器、邮件服务器、网络拓扑结构 攻击目标的个人 身份信息、职业等 收集方法 注册机构Whois查询 DNS和IP收集 WEB信息检索 网络拓扑侦"/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "📚文章",
+      "item": "http://localhost:1313/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "信息收集与扫描",
+      "item": "http://localhost:1313/posts/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%E7%AB%AF%E5%8F%A3%E6%89%AB%E6%8F%8F/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "信息收集与扫描",
+  "name": "信息收集与扫描",
+  "description": "信息收集与扫描 信息收集是指攻击者多攻击目标进行有计划和有步骤的信息收集从而了解目标的网络环境和信息安全状况的过程。 攻击目标网络 域名、IP地址、DNS服务器、邮件服务器、网络拓扑结构 攻击目标的个人 身份信息、职业等 收集方法 注册机构Whois查询 DNS和IP收集 WEB信息检索 网络拓扑侦",
+  "keywords": [
+    
+  ],
+  "articleBody": "信息收集与扫描 信息收集是指攻击者多攻击目标进行有计划和有步骤的信息收集从而了解目标的网络环境和信息安全状况的过程。\n攻击目标网络 域名、IP地址、DNS服务器、邮件服务器、网络拓扑结构 攻击目标的个人 身份信息、职业等 收集方法\n注册机构Whois查询 DNS和IP收集 WEB信息检索 网络拓扑侦察 常用工具：\nhttps://whois.aliyun.com/（万网） https://whois.chinaz.com/ dig host fierce nslookup shodan 主机发现 -sL(列表扫描)\n-sP(Ping扫描)\n-Pn(无ping)\n-PS(TCP SYN Ping)\n-PU(UDP Ping)\n-PR(ARP Ping)\n-n(不用域名解析)\n-R(为所有目标解析域名)\nnmap -sP -n -v 192.169.6.0/24 端口扫描 Nmap漏洞扫描\n四种最基本的扫描：\nTCP connect(-sT参数)\nTCP SYN(-sS参数)\nUDP(-sU参数)\nPing(-sP参数)\n端口的几种状态：open(开放的)， closed(关闭的)，和filtered(被过滤的) 状态\n-sS (TCP SYN扫描) SYN扫描作为默认的也是最受欢迎的扫描选项，是有充分理由的。 它执行得很快，在一个没有入侵防火墙的快速网络上，每秒钟可以扫描数千个 端口。 SYN扫描相对来说不张扬，不易被注意到，因为它从来不完成TCP连接。 它也不像Fin/Null/Xmas，Maimon和Idle扫描依赖于特定平台，而可以应对任何兼容的 TCP协议栈。 它还可以明确可靠地区分open(开放的)， closed(关闭的)，和filtered(被过滤的) 状态 它常常被称为半开放扫描， 因为它不打开一个完全的TCP连接。它发送一个SYN报文， 就像您真的要打开一个连接，然后等待响应。 SYN/ACK表示端口在监听 (开放)，而 RST (复位)表示没有监听者。如果数次重发后仍没响应， 该端口就被标记为被过滤。如果收到ICMP不可到达错误 (类型3，代码1，2，3，9，10，或者13)，该端口也被标记为被过滤。 -sT (TCP connect()扫描) 当SYN扫描不能用时，CP Connect()扫描就是默认的TCP扫描。 当用户没有权限发送原始报文或者扫描IPv6网络时，就是这种情况。 Instead of writing raw packets as most other scan types do，Nmap通过创建connect() 系统调用要求操作系统和目标机以及端口建立连接，而不像其它扫描类型直接发送原始报文。 这是和Web浏览器，P2P客户端以及大多数其它网络应用程序用以建立连接一样的 高层系统调用。它是叫做Berkeley Sockets API编程接口的一部分。Nmap用 该API获得每个连接尝试的状态信息，而不是读取响应的原始报文。 当SYN扫描可用时，它通常是更好的选择。因为Nmap对高层的 connect()调用比对原始报文控制更少， 所以前者效率较低。 该系统调用完全连接到开放的目标端口而不是像SYN扫描进行 半开放的复位。这不仅花更长时间，需要更多报文得到同样信息，目标机也更可能 记录下连接。IDS(入侵检测系统)可以捕获两者，但大部分机器没有这样的警报系统。 当Nmap连接，然后不发送数据又关闭连接， 许多普通UNIX系统上的服务会在syslog留下记录，有时候是一条加密的错误消息。 此时，有些真正可怜的服务会崩溃，虽然这不常发生。如果管理员在日志里看到来自同一系统的 一堆连接尝试，她应该知道她的系统被扫描了。 -sU (UDP扫描) 虽然互联网上很多流行的服务运行在TCP 协议上，UDP服务也不少。 DNS，SNMP，和DHCP (注册的端口是53，161/162，和67/68)是最常见的三个。 因为UDP扫描一般较慢，比TCP更困难，一些安全审核人员忽略这些端口。 这是一个错误，因为可探测的UDP服务相当普遍，攻击者当然不会忽略整个协议。 所幸，Nmap可以帮助记录并报告UDP端口。 UDP扫描用-sU选项激活。它可以和TCP扫描如 SYN扫描 (-sS)结合使用来同时检查两种协议。 UDP扫描发送空的(没有数据)UDP报头到每个目标端口。 如果返回ICMP端口不可到达错误(类型3，代码3)， 该端口是closed(关闭的)。 其它ICMP不可到达错误(类型3， 代码1，2，9，10，或者13)表明该端口是filtered(被过滤的)。 偶尔地，某服务会响应一个UDP报文，证明该端口是open(开放的)。 如果几次重试后还没有响应，该端口就被认为是 open|filtered(开放|被过滤的)。 这意味着该端口可能是开放的，也可能包过滤器正在封锁通信。 可以用版本扫描(-sV)帮助区分真正的开放端口和被过滤的端口。 UDP扫描的巨大挑战是怎样使它更快速。 开放的和被过滤的端口很少响应，让Nmap超时然后再探测，以防探测帧或者 响应丢失。关闭的端口常常是更大的问题。 它们一般发回一个ICMP端口无法到达错误。但是不像关闭的TCP端口响应SYN或者Connect 扫描所发送的RST报文，许多主机在默认情况下限制ICMP端口不可到达消息。 Linux和Solaris对此特别严格。例如， Linux 2.4.20内核限制一秒钟只发送一条目标不可到达消息 (见net/ipv4/icmp。c)。 秘密扫描：\nFIN扫描 -sF ACK扫描 -sA NULL扫描 -sN XMAS扫描 -sX -sA (TCP ACK扫描) 这种扫描与目前为止讨论的其它扫描的不同之处在于 它不能确定open(开放的)或者 open|filtered(开放或者过滤的))端口。 它用于发现防火墙规则，确定它们是有状态的还是无状态的，哪些端口是被过滤的。 ACK扫描探测报文只设置ACK标志位(除非您使用 --scanflags)。当扫描未被过滤的系统时， open(开放的)和closed(关闭的) 端口 都会返回RST报文。Nmap把它们标记为 unfiltered(未被过滤的)，意思是 ACK报文不能到达，但至于它们是open(开放的)或者 closed(关闭的) 无法确定。不响应的端口 或者发送特定的ICMP错误消息(类型3，代号1，2，3，9，10， 或者13)的端口，标记为 filtered(被过滤的)。 -sN; -sF; -sX (TCP Null，FIN，and Xmas扫描) 这三种扫描类型 (甚至用下一节描述的 --scanflags 选项的更多类型) 在TCP RFC 中发掘了一个微妙的方法来区分open(开放的)和 closed(关闭的)端口。第65页说“如果 [目标]端口状态是关闭的.... 进入的不含RST的报文导致一个RST响应。” 接下来的一页 讨论不设置SYN，RST，或者ACK位的报文发送到开放端口: “理论上，这不应该发生，如果您确实收到了，丢弃该报文，返回。 ” 如果扫描系统遵循该RFC，当端口关闭时，任何不包含SYN，RST，或者ACK位的报文会导致 一个RST返回，而当端口开放时，应该没有任何响应。只要不包含SYN，RST，或者ACK， 任何其它三种(FIN，PSH，and URG)的组合都行。Nmap有三种扫描类型利用这一点： Null扫描 (-sN) 不设置任何标志位(tcp标志头是0) FIN扫描 (-sF) 只设置TCP FIN标志位。 Xmas扫描 (-sX) 设置FIN，PSH，和URG标志位，就像点亮圣诞树上所有的灯一样。 除了探测报文的标志位不同，这三种扫描在行为上完全一致。 如果收到一个RST报文，该端口被认为是 closed(关闭的)，而没有响应则意味着 端口是open|filtered(开放或者被过滤的)。 如果收到ICMP不可到达错误(类型 3，代号 1，2，3，9，10，或者13)，该端口就被标记为 被过滤的。 这些扫描的关键优势是它们能躲过一些无状态防火墙和报文过滤路由器。 另一个优势是这些扫描类型甚至比SYN扫描还要隐秘一些。但是别依赖它 -- 多数 现代的IDS产品可以发现它们。一个很大的不足是并非所有系统都严格遵循RFC 793。 许多系统不管端口开放还是关闭，都响应RST。 这导致所有端口都标记为closed(关闭的)。 这样的操作系统主要有Microsoft Windows，许多Cisco设备，BSDI，以及IBM OS/400。 但是这种扫描对多数UNIX系统都能工作。这些扫描的另一个不足是 它们不能辨别open(开放的)端口和一些特定的 filtered(被过滤的)端口，从而返回 open|filtered(开放或者被过滤的)。 服务版本检测\u0026\u0026脚本扫描\u0026\u0026OS检测 nmap -v -SV 192.168.7.2 服务版本检测\nnmap -v -O 192.168.7.2 OS检测\nnamp –script\n",
+  "wordCount" : "3303",
+  "inLanguage": "zh",
+  "datePublished": "0001-01-01T00:00:00Z",
+  "dateModified": "0001-01-01T00:00:00Z",
+  "author":{
+    "@type": "Person",
+    "name": "Sulv"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "http://localhost:1313/posts/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%E7%AB%AF%E5%8F%A3%E6%89%AB%E6%8F%8F/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Codertu's Blog",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "http://localhost:1313/img/Q.gif"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="Sulv&#39;s Blog (Alt + H)">
+                <img src="http://localhost:1313/img/Q.gif" alt="" aria-label="logo"
+                    height="35">Sulv&#39;s Blog</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/search" title="🔍 搜索 (Alt &#43; /)" accesskey=/>
+                    <span>🔍 搜索</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/" title="🏠 主页">
+                    <span>🏠 主页</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/posts" title="📚 文章">
+                    <span>📚 文章</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/tags" title="🧩 标签">
+                    <span>🧩 标签</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/archives/" title="⏱️ 时间轴">
+                    <span>⏱️ 时间轴</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/about" title="🙋🏻‍♂️ 关于">
+                    <span>🙋🏻‍♂️ 关于</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/links" title="🤝 友链">
+                    <span>🤝 友链</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="http://localhost:1313/">主页</a>&nbsp;»&nbsp;<a href="http://localhost:1313/posts/">📚文章</a></div>
+    <h1 class="post-title entry-hint-parent">
+      信息收集与扫描
+    </h1>
+    <div class="post-meta">7 分钟&nbsp;·&nbsp;Sulv
+
+</div>
+  </header> <div class="toc">
+    <details  open>
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">目录</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e4%b8%8e%e6%89%ab%e6%8f%8f" aria-label="信息收集与扫描">信息收集与扫描</a><ul>
+                        
+                <li>
+                    <a href="#%e4%b8%bb%e6%9c%ba%e5%8f%91%e7%8e%b0" aria-label="主机发现">主机发现</a></li>
+                <li>
+                    <a href="#%e7%ab%af%e5%8f%a3%e6%89%ab%e6%8f%8f" aria-label="端口扫描">端口扫描</a></li>
+                <li>
+                    <a href="#%e6%9c%8d%e5%8a%a1%e7%89%88%e6%9c%ac%e6%a3%80%e6%b5%8b%e8%84%9a%e6%9c%ac%e6%89%ab%e6%8f%8fos%e6%a3%80%e6%b5%8b" aria-label="服务版本检测&amp;&amp;脚本扫描&amp;&amp;OS检测">服务版本检测&amp;&amp;脚本扫描&amp;&amp;OS检测</a>
+                </li>
+            </ul>
+            </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><h1 id="信息收集与扫描">信息收集与扫描<a hidden class="anchor" aria-hidden="true" href="#信息收集与扫描">#</a></h1>
+<p>信息收集是指攻击者多攻击目标进行有计划和有步骤的信息收集从而了解目标的网络环境和信息安全状况的过程。</p>
+<ul>
+<li>攻击目标网络 域名、IP地址、DNS服务器、邮件服务器、网络拓扑结构</li>
+<li>攻击目标的个人 身份信息、职业等</li>
+</ul>
+<p>收集方法</p>
+<ul>
+<li>注册机构Whois查询</li>
+<li>DNS和IP收集</li>
+<li>WEB信息检索</li>
+<li>网络拓扑侦察</li>
+</ul>
+<p>常用工具：</p>
+<ul>
+<li><a href="https://whois.aliyun.com/">https://whois.aliyun.com/</a>（万网）</li>
+<li><a href="https://whois.chinaz.com/">https://whois.chinaz.com/</a></li>
+<li>dig     host    fierce    nslookup</li>
+<li>shodan</li>
+</ul>
+<img src="https://gitee.com/lsyzc/picture/raw/master/picture/image-20211007162952101.png" alt="image-20211007162952101"  />
+<img src="https://gitee.com/lsyzc/picture/raw/master/picture/image-20211007163107293.png" alt="image-20211007163107293"  />
+<img src="https://gitee.com/lsyzc/picture/raw/master/picture/image-20211007163158757.png" alt="image-20211007163158757"  />
+<h2 id="主机发现">主机发现<a hidden class="anchor" aria-hidden="true" href="#主机发现">#</a></h2>
+<p>-sL(列表扫描)</p>
+<p>-sP(Ping扫描)</p>
+<p>-Pn(无ping)</p>
+<p>-PS(TCP SYN Ping)</p>
+<p>-PU(UDP Ping)</p>
+<p>-PR(ARP Ping)</p>
+<p>-n(不用域名解析)</p>
+<p>-R(为所有目标解析域名)</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>nmap -sP -n -v 192.169.6.0/24
+</span></span></code></pre></div><h2 id="端口扫描">端口扫描<a hidden class="anchor" aria-hidden="true" href="#端口扫描">#</a></h2>
+<ul>
+<li>
+<p>Nmap漏洞扫描</p>
+<p>四种最基本的扫描：</p>
+<ul>
+<li>
+<p>TCP connect(-sT参数)</p>
+</li>
+<li>
+<p>TCP SYN(-sS参数)</p>
+</li>
+<li>
+<p>UDP(-sU参数)</p>
+</li>
+<li>
+<p>Ping(-sP参数)</p>
+</li>
+</ul>
+<p>端口的几种状态：open(开放的)， closed(关闭的)，和filtered(被过滤的) 状态</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>-sS <span style="color:#f92672">(</span>TCP SYN扫描<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>SYN扫描作为默认的也是最受欢迎的扫描选项，是有充分理由的。 它执行得很快，在一个没有入侵防火墙的快速网络上，每秒钟可以扫描数千个 端口。 SYN扫描相对来说不张扬，不易被注意到，因为它从来不完成TCP连接。 它也不像Fin/Null/Xmas，Maimon和Idle扫描依赖于特定平台，而可以应对任何兼容的 TCP协议栈。 它还可以明确可靠地区分open<span style="color:#f92672">(</span>开放的<span style="color:#f92672">)</span>， closed<span style="color:#f92672">(</span>关闭的<span style="color:#f92672">)</span>，和filtered<span style="color:#f92672">(</span>被过滤的<span style="color:#f92672">)</span> 状态
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>它常常被称为半开放扫描， 因为它不打开一个完全的TCP连接。它发送一个SYN报文， 就像您真的要打开一个连接，然后等待响应。 SYN/ACK表示端口在监听 <span style="color:#f92672">(</span>开放<span style="color:#f92672">)</span>，而 RST <span style="color:#f92672">(</span>复位<span style="color:#f92672">)</span>表示没有监听者。如果数次重发后仍没响应， 该端口就被标记为被过滤。如果收到ICMP不可到达错误 <span style="color:#f92672">(</span>类型3，代码1，2，3，9，10，或者13<span style="color:#f92672">)</span>，该端口也被标记为被过滤。
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>-sT <span style="color:#f92672">(</span>TCP connect<span style="color:#f92672">()</span>扫描<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>当SYN扫描不能用时，CP Connect<span style="color:#f92672">()</span>扫描就是默认的TCP扫描。 当用户没有权限发送原始报文或者扫描IPv6网络时，就是这种情况。 Instead of writing raw packets as most other scan types <span style="color:#66d9ef">do</span>，Nmap通过创建connect<span style="color:#f92672">()</span> 系统调用要求操作系统和目标机以及端口建立连接，而不像其它扫描类型直接发送原始报文。 这是和Web浏览器，P2P客户端以及大多数其它网络应用程序用以建立连接一样的 高层系统调用。它是叫做Berkeley Sockets API编程接口的一部分。Nmap用 该API获得每个连接尝试的状态信息，而不是读取响应的原始报文。
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>当SYN扫描可用时，它通常是更好的选择。因为Nmap对高层的 connect<span style="color:#f92672">()</span>调用比对原始报文控制更少， 所以前者效率较低。 该系统调用完全连接到开放的目标端口而不是像SYN扫描进行 半开放的复位。这不仅花更长时间，需要更多报文得到同样信息，目标机也更可能 记录下连接。IDS<span style="color:#f92672">(</span>入侵检测系统<span style="color:#f92672">)</span>可以捕获两者，但大部分机器没有这样的警报系统。 当Nmap连接，然后不发送数据又关闭连接， 许多普通UNIX系统上的服务会在syslog留下记录，有时候是一条加密的错误消息。 此时，有些真正可怜的服务会崩溃，虽然这不常发生。如果管理员在日志里看到来自同一系统的 一堆连接尝试，她应该知道她的系统被扫描了。
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>-sU <span style="color:#f92672">(</span>UDP扫描<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>虽然互联网上很多流行的服务运行在TCP 协议上，UDP服务也不少。 DNS，SNMP，和DHCP <span style="color:#f92672">(</span>注册的端口是53，161/162，和67/68<span style="color:#f92672">)</span>是最常见的三个。 因为UDP扫描一般较慢，比TCP更困难，一些安全审核人员忽略这些端口。 这是一个错误，因为可探测的UDP服务相当普遍，攻击者当然不会忽略整个协议。 所幸，Nmap可以帮助记录并报告UDP端口。
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>UDP扫描用-sU选项激活。它可以和TCP扫描如 SYN扫描 <span style="color:#f92672">(</span>-sS<span style="color:#f92672">)</span>结合使用来同时检查两种协议。
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>UDP扫描发送空的<span style="color:#f92672">(</span>没有数据<span style="color:#f92672">)</span>UDP报头到每个目标端口。 如果返回ICMP端口不可到达错误<span style="color:#f92672">(</span>类型3，代码3<span style="color:#f92672">)</span>， 该端口是closed<span style="color:#f92672">(</span>关闭的<span style="color:#f92672">)</span>。 其它ICMP不可到达错误<span style="color:#f92672">(</span>类型3， 代码1，2，9，10，或者13<span style="color:#f92672">)</span>表明该端口是filtered<span style="color:#f92672">(</span>被过滤的<span style="color:#f92672">)</span>。 偶尔地，某服务会响应一个UDP报文，证明该端口是open<span style="color:#f92672">(</span>开放的<span style="color:#f92672">)</span>。 如果几次重试后还没有响应，该端口就被认为是 open|filtered<span style="color:#f92672">(</span>开放|被过滤的<span style="color:#f92672">)</span>。 这意味着该端口可能是开放的，也可能包过滤器正在封锁通信。 可以用版本扫描<span style="color:#f92672">(</span>-sV<span style="color:#f92672">)</span>帮助区分真正的开放端口和被过滤的端口。
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>UDP扫描的巨大挑战是怎样使它更快速。 开放的和被过滤的端口很少响应，让Nmap超时然后再探测，以防探测帧或者 响应丢失。关闭的端口常常是更大的问题。 它们一般发回一个ICMP端口无法到达错误。但是不像关闭的TCP端口响应SYN或者Connect 扫描所发送的RST报文，许多主机在默认情况下限制ICMP端口不可到达消息。 Linux和Solaris对此特别严格。例如， Linux 2.4.20内核限制一秒钟只发送一条目标不可到达消息 <span style="color:#f92672">(</span>见net/ipv4/icmp。c<span style="color:#f92672">)</span>。
+</span></span></code></pre></div><p>秘密扫描：</p>
+<ul>
+<li>FIN扫描 -sF</li>
+<li>ACK扫描 -sA</li>
+<li>NULL扫描 -sN</li>
+<li>XMAS扫描 -sX</li>
+</ul>
+<p><img loading="lazy" src="https://gitee.com/lsyzc/picture/raw/master/picture/image-20211007150502630.png" alt="image-20211007150502630"  />
+</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>-sA <span style="color:#f92672">(</span>TCP ACK扫描<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>这种扫描与目前为止讨论的其它扫描的不同之处在于 它不能确定open<span style="color:#f92672">(</span>开放的<span style="color:#f92672">)</span>或者 open|filtered<span style="color:#f92672">(</span>开放或者过滤的<span style="color:#f92672">))</span>端口。 它用于发现防火墙规则，确定它们是有状态的还是无状态的，哪些端口是被过滤的。
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>ACK扫描探测报文只设置ACK标志位<span style="color:#f92672">(</span>除非您使用 --scanflags<span style="color:#f92672">)</span>。当扫描未被过滤的系统时， open<span style="color:#f92672">(</span>开放的<span style="color:#f92672">)</span>和closed<span style="color:#f92672">(</span>关闭的<span style="color:#f92672">)</span> 端口 都会返回RST报文。Nmap把它们标记为 unfiltered<span style="color:#f92672">(</span>未被过滤的<span style="color:#f92672">)</span>，意思是 ACK报文不能到达，但至于它们是open<span style="color:#f92672">(</span>开放的<span style="color:#f92672">)</span>或者 closed<span style="color:#f92672">(</span>关闭的<span style="color:#f92672">)</span> 无法确定。不响应的端口 或者发送特定的ICMP错误消息<span style="color:#f92672">(</span>类型3，代号1，2，3，9，10， 或者13<span style="color:#f92672">)</span>的端口，标记为 filtered<span style="color:#f92672">(</span>被过滤的<span style="color:#f92672">)</span>。
+</span></span><span style="display:flex;"><span>-sN; -sF; -sX <span style="color:#f92672">(</span>TCP Null，FIN，and Xmas扫描<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>这三种扫描类型 <span style="color:#f92672">(</span>甚至用下一节描述的 --scanflags 选项的更多类型<span style="color:#f92672">)</span> 在TCP RFC 中发掘了一个微妙的方法来区分open<span style="color:#f92672">(</span>开放的<span style="color:#f92672">)</span>和 closed<span style="color:#f92672">(</span>关闭的<span style="color:#f92672">)</span>端口。第65页说“如果 <span style="color:#f92672">[</span>目标<span style="color:#f92672">]</span>端口状态是关闭的.... 进入的不含RST的报文导致一个RST响应。” 接下来的一页 讨论不设置SYN，RST，或者ACK位的报文发送到开放端口: “理论上，这不应该发生，如果您确实收到了，丢弃该报文，返回。 ”
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>如果扫描系统遵循该RFC，当端口关闭时，任何不包含SYN，RST，或者ACK位的报文会导致 一个RST返回，而当端口开放时，应该没有任何响应。只要不包含SYN，RST，或者ACK， 任何其它三种<span style="color:#f92672">(</span>FIN，PSH，and URG<span style="color:#f92672">)</span>的组合都行。Nmap有三种扫描类型利用这一点：
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Null扫描 <span style="color:#f92672">(</span>-sN<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>不设置任何标志位<span style="color:#f92672">(</span>tcp标志头是0<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>FIN扫描 <span style="color:#f92672">(</span>-sF<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>只设置TCP FIN标志位。
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Xmas扫描 <span style="color:#f92672">(</span>-sX<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>设置FIN，PSH，和URG标志位，就像点亮圣诞树上所有的灯一样。
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>除了探测报文的标志位不同，这三种扫描在行为上完全一致。 如果收到一个RST报文，该端口被认为是 closed<span style="color:#f92672">(</span>关闭的<span style="color:#f92672">)</span>，而没有响应则意味着 端口是open|filtered<span style="color:#f92672">(</span>开放或者被过滤的<span style="color:#f92672">)</span>。 如果收到ICMP不可到达错误<span style="color:#f92672">(</span>类型 3，代号 1，2，3，9，10，或者13<span style="color:#f92672">)</span>，该端口就被标记为 被过滤的。
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>这些扫描的关键优势是它们能躲过一些无状态防火墙和报文过滤路由器。 另一个优势是这些扫描类型甚至比SYN扫描还要隐秘一些。但是别依赖它 -- 多数 现代的IDS产品可以发现它们。一个很大的不足是并非所有系统都严格遵循RFC 793。 许多系统不管端口开放还是关闭，都响应RST。 这导致所有端口都标记为closed<span style="color:#f92672">(</span>关闭的<span style="color:#f92672">)</span>。 这样的操作系统主要有Microsoft Windows，许多Cisco设备，BSDI，以及IBM OS/400。 但是这种扫描对多数UNIX系统都能工作。这些扫描的另一个不足是 它们不能辨别open<span style="color:#f92672">(</span>开放的<span style="color:#f92672">)</span>端口和一些特定的 filtered<span style="color:#f92672">(</span>被过滤的<span style="color:#f92672">)</span>端口，从而返回 open|filtered<span style="color:#f92672">(</span>开放或者被过滤的<span style="color:#f92672">)</span>。
+</span></span></code></pre></div></li>
+</ul>
+<h2 id="服务版本检测脚本扫描os检测">服务版本检测&amp;&amp;脚本扫描&amp;&amp;OS检测<a hidden class="anchor" aria-hidden="true" href="#服务版本检测脚本扫描os检测">#</a></h2>
+<p>nmap -v -SV 192.168.7.2 服务版本检测</p>
+<p>nmap -v -O 192.168.7.2  OS检测</p>
+<p>namp &ndash;script</p>
+<p><img loading="lazy" src="C:/Users/Lsy/AppData/Roaming/Typora/typora-user-images/image-20211007161016825.png" alt="image-20211007161016825"  />
+</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+<nav class="paginav">
+  <a class="prev" href="http://localhost:1313/posts/%E7%BD%91%E7%BB%9C%E8%AE%BE%E8%AE%A1%E7%AC%AC%E4%B8%80%E6%AC%A1%E6%B5%8B%E8%AF%95/">
+    <span class="title">« 上一页</span>
+    <br>
+    <span>网络设计初测</span>
+  </a>
+</nav>
+
+
+<ul class="share-buttons">
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share 信息收集与扫描 on x"
+            href="https://x.com/intent/tweet/?text=%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e4%b8%8e%e6%89%ab%e6%8f%8f&amp;url=http%3a%2f%2flocalhost%3a1313%2fposts%2f%25E4%25BF%25A1%25E6%2581%25AF%25E6%2594%25B6%25E9%259B%2586%25E7%25AB%25AF%25E5%258F%25A3%25E6%2589%25AB%25E6%258F%258F%2f&amp;hashtags=">
+            <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M512 62.554 L 512 449.446 C 512 483.97 483.97 512 449.446 512 L 62.554 512 C 28.03 512 0 483.97 0 449.446 L 0 62.554 C 0 28.03 28.029 0 62.554 0 L 449.446 0 C 483.971 0 512 28.03 512 62.554 Z M 269.951 190.75 L 182.567 75.216 L 56 75.216 L 207.216 272.95 L 63.9 436.783 L 125.266 436.783 L 235.9 310.383 L 332.567 436.783 L 456 436.783 L 298.367 228.367 L 432.367 75.216 L 371.033 75.216 Z M 127.633 110 L 164.101 110 L 383.481 400.065 L 349.5 400.065 Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share 信息收集与扫描 on linkedin"
+            href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3a%2f%2flocalhost%3a1313%2fposts%2f%25E4%25BF%25A1%25E6%2581%25AF%25E6%2594%25B6%25E9%259B%2586%25E7%25AB%25AF%25E5%258F%25A3%25E6%2589%25AB%25E6%258F%258F%2f&amp;title=%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e4%b8%8e%e6%89%ab%e6%8f%8f&amp;summary=%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e4%b8%8e%e6%89%ab%e6%8f%8f&amp;source=http%3a%2f%2flocalhost%3a1313%2fposts%2f%25E4%25BF%25A1%25E6%2581%25AF%25E6%2594%25B6%25E9%259B%2586%25E7%25AB%25AF%25E5%258F%25A3%25E6%2589%25AB%25E6%258F%258F%2f">
+            <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-288.985,423.278l0,-225.717l-75.04,0l0,225.717l75.04,0Zm270.539,0l0,-129.439c0,-69.333 -37.018,-101.586 -86.381,-101.586c-39.804,0 -57.634,21.891 -67.617,37.266l0,-31.958l-75.021,0c0.995,21.181 0,225.717 0,225.717l75.02,0l0,-126.056c0,-6.748 0.486,-13.492 2.474,-18.315c5.414,-13.475 17.767,-27.434 38.494,-27.434c27.135,0 38.007,20.707 38.007,51.037l0,120.768l75.024,0Zm-307.552,-334.556c-25.674,0 -42.448,16.879 -42.448,39.002c0,21.658 16.264,39.002 41.455,39.002l0.484,0c26.165,0 42.452,-17.344 42.452,-39.002c-0.485,-22.092 -16.241,-38.954 -41.943,-39.002Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share 信息收集与扫描 on reddit"
+            href="https://reddit.com/submit?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f%25E4%25BF%25A1%25E6%2581%25AF%25E6%2594%25B6%25E9%259B%2586%25E7%25AB%25AF%25E5%258F%25A3%25E6%2589%25AB%25E6%258F%258F%2f&title=%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e4%b8%8e%e6%89%ab%e6%8f%8f">
+            <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-3.446,265.638c0,-22.964 -18.616,-41.58 -41.58,-41.58c-11.211,0 -21.361,4.457 -28.841,11.666c-28.424,-20.508 -67.586,-33.757 -111.204,-35.278l18.941,-89.121l61.884,13.157c0.756,15.734 13.642,28.29 29.56,28.29c16.407,0 29.706,-13.299 29.706,-29.701c0,-16.403 -13.299,-29.702 -29.706,-29.702c-11.666,0 -21.657,6.792 -26.515,16.578l-69.105,-14.69c-1.922,-0.418 -3.939,-0.042 -5.585,1.036c-1.658,1.073 -2.811,2.761 -3.224,4.686l-21.152,99.438c-44.258,1.228 -84.046,14.494 -112.837,35.232c-7.468,-7.164 -17.589,-11.591 -28.757,-11.591c-22.965,0 -41.585,18.616 -41.585,41.58c0,16.896 10.095,31.41 24.568,37.918c-0.639,4.135 -0.99,8.328 -0.99,12.576c0,63.977 74.469,115.836 166.33,115.836c91.861,0 166.334,-51.859 166.334,-115.836c0,-4.218 -0.347,-8.387 -0.977,-12.493c14.564,-6.47 24.735,-21.034 24.735,-38.001Zm-119.474,108.193c-20.27,20.241 -59.115,21.816 -70.534,21.816c-11.428,0 -50.277,-1.575 -70.522,-21.82c-3.007,-3.008 -3.007,-7.882 0,-10.889c3.003,-2.999 7.882,-3.003 10.885,0c12.777,12.781 40.11,17.317 59.637,17.317c19.522,0 46.86,-4.536 59.657,-17.321c3.016,-2.999 7.886,-2.995 10.885,0.008c3.008,3.011 3.003,7.882 -0.008,10.889Zm-5.23,-48.781c-16.373,0 -29.701,-13.324 -29.701,-29.698c0,-16.381 13.328,-29.714 29.701,-29.714c16.378,0 29.706,13.333 29.706,29.714c0,16.374 -13.328,29.698 -29.706,29.698Zm-160.386,-29.702c0,-16.381 13.328,-29.71 29.714,-29.71c16.369,0 29.689,13.329 29.689,29.71c0,16.373 -13.32,29.693 -29.689,29.693c-16.386,0 -29.714,-13.32 -29.714,-29.693Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share 信息收集与扫描 on facebook"
+            href="https://facebook.com/sharer/sharer.php?u=http%3a%2f%2flocalhost%3a1313%2fposts%2f%25E4%25BF%25A1%25E6%2581%25AF%25E6%2594%25B6%25E9%259B%2586%25E7%25AB%25AF%25E5%258F%25A3%25E6%2589%25AB%25E6%258F%258F%2f">
+            <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-106.468,0l0,-192.915l66.6,0l12.672,-82.621l-79.272,0l0,-53.617c0,-22.603 11.073,-44.636 46.58,-44.636l36.042,0l0,-70.34c0,0 -32.71,-5.582 -63.982,-5.582c-65.288,0 -107.96,39.569 -107.96,111.204l0,62.971l-72.573,0l0,82.621l72.573,0l0,192.915l-191.104,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share 信息收集与扫描 on whatsapp"
+            href="https://api.whatsapp.com/send?text=%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e4%b8%8e%e6%89%ab%e6%8f%8f%20-%20http%3a%2f%2flocalhost%3a1313%2fposts%2f%25E4%25BF%25A1%25E6%2581%25AF%25E6%2594%25B6%25E9%259B%2586%25E7%25AB%25AF%25E5%258F%25A3%25E6%2589%25AB%25E6%258F%258F%2f">
+            <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-58.673,127.703c-33.842,-33.881 -78.847,-52.548 -126.798,-52.568c-98.799,0 -179.21,80.405 -179.249,179.234c-0.013,31.593 8.241,62.428 23.927,89.612l-25.429,92.884l95.021,-24.925c26.181,14.28 55.659,21.807 85.658,21.816l0.074,0c98.789,0 179.206,-80.413 179.247,-179.243c0.018,-47.895 -18.61,-92.93 -52.451,-126.81Zm-126.797,275.782l-0.06,0c-26.734,-0.01 -52.954,-7.193 -75.828,-20.767l-5.441,-3.229l-56.386,14.792l15.05,-54.977l-3.542,-5.637c-14.913,-23.72 -22.791,-51.136 -22.779,-79.287c0.033,-82.142 66.867,-148.971 149.046,-148.971c39.793,0.014 77.199,15.531 105.329,43.692c28.128,28.16 43.609,65.592 43.594,105.4c-0.034,82.149 -66.866,148.983 -148.983,148.984Zm81.721,-111.581c-4.479,-2.242 -26.499,-13.075 -30.604,-14.571c-4.105,-1.495 -7.091,-2.241 -10.077,2.241c-2.986,4.483 -11.569,14.572 -14.182,17.562c-2.612,2.988 -5.225,3.364 -9.703,1.12c-4.479,-2.241 -18.91,-6.97 -36.017,-22.23c-13.314,-11.876 -22.304,-26.542 -24.916,-31.026c-2.612,-4.484 -0.279,-6.908 1.963,-9.14c2.016,-2.007 4.48,-5.232 6.719,-7.847c2.24,-2.615 2.986,-4.484 4.479,-7.472c1.493,-2.99 0.747,-5.604 -0.374,-7.846c-1.119,-2.241 -10.077,-24.288 -13.809,-33.256c-3.635,-8.733 -7.327,-7.55 -10.077,-7.688c-2.609,-0.13 -5.598,-0.158 -8.583,-0.158c-2.986,0 -7.839,1.121 -11.944,5.604c-4.105,4.484 -15.675,15.32 -15.675,37.364c0,22.046 16.048,43.342 18.287,46.332c2.24,2.99 31.582,48.227 76.511,67.627c10.685,4.615 19.028,7.371 25.533,9.434c10.728,3.41 20.492,2.929 28.209,1.775c8.605,-1.285 26.499,-10.833 30.231,-21.295c3.732,-10.464 3.732,-19.431 2.612,-21.298c-1.119,-1.869 -4.105,-2.99 -8.583,-5.232Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share 信息收集与扫描 on telegram"
+            href="https://telegram.me/share/url?text=%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e4%b8%8e%e6%89%ab%e6%8f%8f&amp;url=http%3a%2f%2flocalhost%3a1313%2fposts%2f%25E4%25BF%25A1%25E6%2581%25AF%25E6%2594%25B6%25E9%259B%2586%25E7%25AB%25AF%25E5%258F%25A3%25E6%2589%25AB%25E6%258F%258F%2f">
+            <svg version="1.1" xml:space="preserve" viewBox="2 2 28 28" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M26.49,29.86H5.5a3.37,3.37,0,0,1-2.47-1,3.35,3.35,0,0,1-1-2.47V5.48A3.36,3.36,0,0,1,3,3,3.37,3.37,0,0,1,5.5,2h21A3.38,3.38,0,0,1,29,3a3.36,3.36,0,0,1,1,2.46V26.37a3.35,3.35,0,0,1-1,2.47A3.38,3.38,0,0,1,26.49,29.86Zm-5.38-6.71a.79.79,0,0,0,.85-.66L24.73,9.24a.55.55,0,0,0-.18-.46.62.62,0,0,0-.41-.17q-.08,0-16.53,6.11a.59.59,0,0,0-.41.59.57.57,0,0,0,.43.52l4,1.24,1.61,4.83a.62.62,0,0,0,.63.43.56.56,0,0,0,.4-.17L16.54,20l4.09,3A.9.9,0,0,0,21.11,23.15ZM13.8,20.71l-1.21-4q8.72-5.55,8.78-5.55c.15,0,.23,0,.23.16a.18.18,0,0,1,0,.06s-2.51,2.3-7.52,6.8Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share 信息收集与扫描 on ycombinator"
+            href="https://news.ycombinator.com/submitlink?t=%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e4%b8%8e%e6%89%ab%e6%8f%8f&u=http%3a%2f%2flocalhost%3a1313%2fposts%2f%25E4%25BF%25A1%25E6%2581%25AF%25E6%2594%25B6%25E9%259B%2586%25E7%25AB%25AF%25E5%258F%25A3%25E6%2589%25AB%25E6%258F%258F%2f">
+            <svg version="1.1" xml:space="preserve" width="30px" height="30px" viewBox="0 0 512 512" fill="currentColor"
+                xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape">
+                <path
+                    d="M449.446 0C483.971 0 512 28.03 512 62.554L512 449.446C512 483.97 483.97 512 449.446 512L62.554 512C28.03 512 0 483.97 0 449.446L0 62.554C0 28.03 28.029 0 62.554 0L449.446 0ZM183.8767 87.9921H121.8427L230.6673 292.4508V424.0079H281.3328V292.4508L390.1575 87.9921H328.1233L256 238.2489z" />
+            </svg>
+        </a>
+    </li>
+</ul>
+
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2024 <a href="http://localhost:1313/">Codertu&#39;s Blog</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = '复制';
+
+        function copyingDone() {
+            copybutton.innerHTML = '已复制！';
+            setTimeout(() => {
+                copybutton.innerHTML = '复制';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>
