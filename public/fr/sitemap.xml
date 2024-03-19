@@ -2,27 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/hugo-PaperMod/fr/frcategories/</loc>
+    <loc>http://hk.codertu.top/fr/frcategories/</loc>
   </url><url>
-    <loc>http://localhost:1313/hugo-PaperMod/fr/frseries/</loc>
+    <loc>http://hk.codertu.top/fr/frseries/</loc>
   </url><url>
-    <loc>http://localhost:1313/hugo-PaperMod/fr/frtags/</loc>
+    <loc>http://hk.codertu.top/fr/frtags/</loc>
   </url><url>
-    <loc>http://localhost:1313/hugo-PaperMod/fr/</loc>
+    <loc>http://hk.codertu.top/fr/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/hugo-PaperMod/"
+                href="http://hk.codertu.top/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fa"
-                href="http://localhost:1313/hugo-PaperMod/fa/"
+                href="http://hk.codertu.top/fa/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://localhost:1313/hugo-PaperMod/fr/"
+                href="http://hk.codertu.top/fr/"
                 />
   </url>
 </urlset>

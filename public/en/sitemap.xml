@@ -2,37 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/hugo-PaperMod/search/</loc>
+    <loc>http://hk.codertu.top/search/</loc>
   </url><url>
-    <loc>http://localhost:1313/hugo-PaperMod/tags/</loc>
+    <loc>http://hk.codertu.top/tags/</loc>
   </url><url>
-    <loc>http://localhost:1313/hugo-PaperMod/test.ya/</loc>
+    <loc>http://hk.codertu.top/test.ya/</loc>
   </url><url>
-    <loc>http://localhost:1313/hugo-PaperMod/archives/</loc>
+    <loc>http://hk.codertu.top/archives/</loc>
   </url><url>
-    <loc>http://localhost:1313/hugo-PaperMod/categories/</loc>
+    <loc>http://hk.codertu.top/categories/</loc>
   </url><url>
-    <loc>http://localhost:1313/hugo-PaperMod/posts/my-first-post/</loc>
+    <loc>http://hk.codertu.top/posts/my-first-post/</loc>
   </url><url>
-    <loc>http://localhost:1313/hugo-PaperMod/</loc>
+    <loc>http://hk.codertu.top/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://localhost:1313/hugo-PaperMod/fr/"
+                href="http://hk.codertu.top/fr/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fa"
-                href="http://localhost:1313/hugo-PaperMod/fa/"
+                href="http://hk.codertu.top/fa/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/hugo-PaperMod/"
+                href="http://hk.codertu.top/"
                 />
   </url><url>
-    <loc>http://localhost:1313/hugo-PaperMod/posts/</loc>
+    <loc>http://hk.codertu.top/posts/</loc>
   </url><url>
-    <loc>http://localhost:1313/hugo-PaperMod/series/</loc>
+    <loc>http://hk.codertu.top/series/</loc>
   </url>
 </urlset>
