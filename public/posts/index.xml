@@ -1,33 +1,59 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>📚文章 on Codertu&#39;s Blog</title>
+    <title>Posts on CoderTu&#39;s Site</title>
     <link>http://localhost:1313/posts/</link>
-    <description>Recent content in 📚文章 on Codertu&#39;s Blog</description>
+    <description>Recent content in Posts on CoderTu&#39;s Site</description>
+    <image>
+      <title>CoderTu&#39;s Site</title>
+      <url>http://localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>http://localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh</language>
-    <lastBuildDate>Mon, 01 Jan 0001 00:00:00 +0000</lastBuildDate>
+    <language>en</language>
+    <lastBuildDate>Sun, 10 Mar 2019 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>frp实现多台主机内网穿透</title>
-      <link>http://localhost:1313/posts/frp%E5%AE%9E%E7%8E%B0%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/frp%E5%AE%9E%E7%8E%B0%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/</guid>
-      <description>概述 frp 是什么？ frp 是一个专注于内网穿透的高性能的反向代理应用，支持 TCP、UDP、HTTP、HTTPS 等多种协议。可以将内网服务以安全、便捷的方式通过具有公网 IP 节点的中转暴露到公网。 具体参见官方文档:https://github.com/fatedier/frp/blob/dev/</description>
+      <title>Code Syntax Guide</title>
+      <link>http://localhost:1313/posts/code-syntax-guide/</link>
+      <pubDate>Sun, 10 Mar 2019 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/code-syntax-guide/</guid>
+      <description>Sample article showcasing basic code syntax and formatting for HTML elements.</description>
     </item>
     <item>
-      <title>网络设计初测</title>
-      <link>http://localhost:1313/posts/%E7%BD%91%E7%BB%9C%E8%AE%BE%E8%AE%A1%E7%AC%AC%E4%B8%80%E6%AC%A1%E6%B5%8B%E8%AF%95/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/%E7%BD%91%E7%BB%9C%E8%AE%BE%E8%AE%A1%E7%AC%AC%E4%B8%80%E6%AC%A1%E6%B5%8B%E8%AF%95/</guid>
-      <description>在AS1、AS2、AS3上划分vlan as1 AS1(config)#vlan 10 AS1(config-vlan)#vlan 11 AS1(config-vlan)#int f0/1 AS1(config-if)#switchport mode access AS1(config-if)#switchport access vlan 11 AS1(config-if)#int g0/2 AS1(config-if)#switchport mode access AS1(config-if)#switchport access vlan 10 as2 AS2(config)#vlan 11 AS2(config-vlan)#vlan 22 AS2(config-vlan)#int f0/1 AS2(config-if)#switchport mode access AS2(config-if)#switchport access vlan 11 AS2(config-if)#int f0/2 AS2(config-if)#switchport mode access AS2(config-if)#switchport access vlan 22 as3 AS3(config)#vlan 22 AS3(config-vlan)#vlan 33 AS3(config-vlan)#int f0/1 AS3(config-if)#switchport mode access AS3(config-if)#switchport access vlan 22 AS3(config-if)#int f0/2 AS3(config-if)#switchport mode access AS3(config-if)#switchport access vlan 33 在CS上配置vlan和trunk 在CS配置vlan10、vlan11、vlan22、vlan33、vla</description>
+      <title>nginx负载均衡与反向代理</title>
+      <link>http://localhost:1313/posts/nginx%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%E4%B8%8E%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86/</link>
+      <pubDate>Sun, 10 Mar 2019 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/nginx%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%E4%B8%8E%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86/</guid>
+      <description>代理：也被叫做正向代理，是一个位于客户端和目标服务器之间的代理服务器。
+作用：客户端将发送的请求和指定的目标服务器提交给代理服务器，然后代理服务器向目标服务器发起请求，并将获得的响应结果返回给客户端的过程。
+反向代理：对于客户端而言就是目标服务器。
+作用：客户端向反向代理服务器发送请求后，反向代理服务器将该请求转发给内部网络上的后端服务器，并将从后端服务器上得到的响应结果返回给客户端。
+►负载均衡(Load Balance)是集群技术（Cluster）的一种应用。将大量的并发请求分担到多个处理节点，从而提高并发处理能力。 由于单个处理节点的故障不影响整个服务，负载均衡集群同时也实现了高可用。
+►任何的负载均衡技术都要建立某种一对多的映射机制，一个请求的入口映射到多个处理请求的节点，不同的机制形成不同的负载均衡技术，常见的包括：
+•手动选择
+•DNS轮询
+•IP负载均衡
+•CDN
+nginx实现负载均衡
+配置方式 说明 轮询方式 负载均衡默认设置方式，每个请求按照时间顺序逐一分配到不同的后端服务器进行处理，如果有服务器宕机，会自动剔除 权重方式 利用weight指定轮询的权重比率，与访问率成正比，用于后端服务器性能不均的情况 ip_hash方式 每个请求按访问IP的hash结果分配，这样可以使每个访客固定访问一个后端服务器，可以解决Session共享的问题 第三方模块 第三方模块采用fair时，按照每台服务器的响应时间来分配请求，响应时间短的优先分配；若第三方模块采用url_hash时，按照访问url的hash值来分配请求 一般轮询 server { listen 80; server_name www.test.com; location / { proxy_pass http://APP; } } \#配置负载均衡服务器组 Upstream APP { server 172.18.0.111; server 172.18.0.112; } 加权轮询 server { listen 80; server_name www.test.com; location / { proxy_pass http://APP; } } \#配置负载均衡服务器组 Upstream APP { server 172.18.0.111 weight=1; server 172.18.0.112 weight=3; } ip hash server { listen 80; server_name www.</description>
     </item>
     <item>
-      <title>信息收集与扫描</title>
-      <link>http://localhost:1313/posts/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%E7%AB%AF%E5%8F%A3%E6%89%AB%E6%8F%8F/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%E7%AB%AF%E5%8F%A3%E6%89%AB%E6%8F%8F/</guid>
-      <description>信息收集与扫描 信息收集是指攻击者多攻击目标进行有计划和有步骤的信息收集从而了解目标的网络环境和信息安全状况的过程。 攻击目标网络 域名、IP地址、DNS服务器、邮件服务器、网络拓扑结构 攻击目标的个人 身份信息、职业等 收集方法 注册机构Whois查询 DNS和IP收集 WEB信息检索 网络拓扑侦</description>
+      <title>raid</title>
+      <link>http://localhost:1313/posts/raid/</link>
+      <pubDate>Sun, 10 Mar 2019 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/raid/</guid>
+      <description>raid0（高性能，大容量，安全性低无冗余备份）
+raid1（一半用于备份）
+raid 2-4(校验数据分布在一块盘上)
+raid5(校验数据分布在各个盘上两块盘损坏数据丢失)
+raid6（两次奇偶校验最少4块）
+raid10（raid1和0结合）
+raid50（先raid5再条带化）
+SAN网络存储（FC将scsi封装到光纤协议）
+IP存储（以太网交换机，将scsi封装到ip）
+CAP理论（一致性、可用性、容错性不可同时满足）
+BASE理论（基本可用、软状态、最终一致性）</description>
     </item>
   </channel>
 </rss>

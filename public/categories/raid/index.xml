@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Raid on CoderTu&#39;s Site</title>
+    <link>http://localhost:1313/categories/raid/</link>
+    <description>Recent content in Raid on CoderTu&#39;s Site</description>
+    <image>
+      <title>CoderTu&#39;s Site</title>
+      <url>http://localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>http://localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 10 Mar 2019 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/raid/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>raid</title>
+      <link>http://localhost:1313/posts/raid/</link>
+      <pubDate>Sun, 10 Mar 2019 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/raid/</guid>
+      <description>raid0（高性能，大容量，安全性低无冗余备份）
+raid1（一半用于备份）
+raid 2-4(校验数据分布在一块盘上)
+raid5(校验数据分布在各个盘上两块盘损坏数据丢失)
+raid6（两次奇偶校验最少4块）
+raid10（raid1和0结合）
+raid50（先raid5再条带化）
+SAN网络存储（FC将scsi封装到光纤协议）
+IP存储（以太网交换机，将scsi封装到ip）
+CAP理论（一致性、可用性、容错性不可同时满足）
+BASE理论（基本可用、软状态、最终一致性）</description>
+    </item>
+  </channel>
+</rss>

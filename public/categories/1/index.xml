@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>1 on CoderTu&#39;s Site</title>
+    <link>http://localhost:1313/categories/1/</link>
+    <description>Recent content in 1 on CoderTu&#39;s Site</description>
+    <image>
+      <title>CoderTu&#39;s Site</title>
+      <url>http://localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>http://localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 10 Mar 2019 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/1/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>nginx负载均衡与反向代理</title>
+      <link>http://localhost:1313/posts/nginx%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%E4%B8%8E%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86/</link>
+      <pubDate>Sun, 10 Mar 2019 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/nginx%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%E4%B8%8E%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86/</guid>
+      <description>代理：也被叫做正向代理，是一个位于客户端和目标服务器之间的代理服务器。
+作用：客户端将发送的请求和指定的目标服务器提交给代理服务器，然后代理服务器向目标服务器发起请求，并将获得的响应结果返回给客户端的过程。
+反向代理：对于客户端而言就是目标服务器。
+作用：客户端向反向代理服务器发送请求后，反向代理服务器将该请求转发给内部网络上的后端服务器，并将从后端服务器上得到的响应结果返回给客户端。
+►负载均衡(Load Balance)是集群技术（Cluster）的一种应用。将大量的并发请求分担到多个处理节点，从而提高并发处理能力。 由于单个处理节点的故障不影响整个服务，负载均衡集群同时也实现了高可用。
+►任何的负载均衡技术都要建立某种一对多的映射机制，一个请求的入口映射到多个处理请求的节点，不同的机制形成不同的负载均衡技术，常见的包括：
+•手动选择
+•DNS轮询
+•IP负载均衡
+•CDN
+nginx实现负载均衡
+配置方式 说明 轮询方式 负载均衡默认设置方式，每个请求按照时间顺序逐一分配到不同的后端服务器进行处理，如果有服务器宕机，会自动剔除 权重方式 利用weight指定轮询的权重比率，与访问率成正比，用于后端服务器性能不均的情况 ip_hash方式 每个请求按访问IP的hash结果分配，这样可以使每个访客固定访问一个后端服务器，可以解决Session共享的问题 第三方模块 第三方模块采用fair时，按照每台服务器的响应时间来分配请求，响应时间短的优先分配；若第三方模块采用url_hash时，按照访问url的hash值来分配请求 一般轮询 server { listen 80; server_name www.test.com; location / { proxy_pass http://APP; } } \#配置负载均衡服务器组 Upstream APP { server 172.18.0.111; server 172.18.0.112; } 加权轮询 server { listen 80; server_name www.test.com; location / { proxy_pass http://APP; } } \#配置负载均衡服务器组 Upstream APP { server 172.18.0.111 weight=1; server 172.18.0.112 weight=3; } ip hash server { listen 80; server_name www.</description>
+    </item>
+    <item>
+      <title>raid</title>
+      <link>http://localhost:1313/posts/raid/</link>
+      <pubDate>Sun, 10 Mar 2019 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/raid/</guid>
+      <description>raid0（高性能，大容量，安全性低无冗余备份）
+raid1（一半用于备份）
+raid 2-4(校验数据分布在一块盘上)
+raid5(校验数据分布在各个盘上两块盘损坏数据丢失)
+raid6（两次奇偶校验最少4块）
+raid10（raid1和0结合）
+raid50（先raid5再条带化）
+SAN网络存储（FC将scsi封装到光纤协议）
+IP存储（以太网交换机，将scsi封装到ip）
+CAP理论（一致性、可用性、容错性不可同时满足）
+BASE理论（基本可用、软状态、最终一致性）</description>
+    </item>
+  </channel>
+</rss>
